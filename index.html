@@ -1,37 +1,140 @@
-<html>
-<head>
- <title>Areeb Shafqat Portfolio | Data Scientist </title>
- <link rel='stylesheet' href='./CSS/style.css' type='text/css'>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="./css/index.css"/>
+    </head>
 
-
-
-<body>
- 
-    <header>
+    <body>
         <nav>
-            <ul>
-                <li><a href='#'>About</a></li>
-                <li><a href='#'>Projects</a></li>
-                <li><a href='#'>Blog</a></li>
-                <li><a href='#'>Contact</a></li>
+            <h2 id="logo">Areeb Shafqat</h2>
+            <ul class="navigation">
+                <li class="nav_item"><a href="#about-me">About Me</a></li>
+                <li class="nav_item"><a href="#about-me">Projects</a></li>
+                <li class="nav_item"><a href="#about-me">Skills</a></li>
+                <li class="nav_item"><a href="#about-me">Contact</a></li>
             </ul>
         </nav>
-    </header>
+
+        <main>
+            <section id="about-me">
+                <div class="about_me_container">
+                    <div class="about_me_text_container">
+                        <h2>About Me</h2>
+                        <p>
+                            Hi! I'm Areeb, a passionate data professional, with a background
+                            in mathematics, physics, e-busines, and data science, having graduated from Warwick
+                            University in 2021. My main dissertation project focused on developing an academic timetabling algorithm using
+                            Generative Adversarial Networks and Evolutionary Algorithms (EA-GAN).
+                        </p>
+
+                        <p>
+                            During my search for a data science project, I got involved in research with the Warwick Data Science Society concerning
+                            applying clustering algorithms to UK Parliament data to identify common parliamentary constituencies based on voting behaviour. 
+                            completed a data and AI specialist bootcamp with AiCore where I worked on industry-standard projects, the two main projects being a 
+                            data collection pipeline to scrape product data from Amazon and a search ranking system which gave relevant product category output after assessing
+                            probablities from the image and text data input using a multi-modal neural network. 
+                            Last but not least, I completed a data science fellowship with
+                            fellowship.ai where in a team based setting, I tackled the problem of generating image masks from bi-temporal images which were taken pre and post 
+                            disaster using Siamese Networks.
+                        </p>
+
+                        <p>
+                            In my free time, I like to keep up to date with the lastest AI developments such as LLMs, prompt engineering, and applications of AI in healthcare in modern times.
+                            Apart from work and studies, I do love photography, playing table tennis and fifa where I do get extremely competitive in the last two.
+                        </p>
+
+                        <p>
+                            Fun Fact! I presented my dissertation research in the OR63 conference!
+                        </p>
+                    </div>
+                    <img src="./images/WhatsApp Image 2023-01-23 at 09.14.29.jpg"
+                    alt="A photo of me during my graduation ceremony"
+                    class="portrait"/>
+                    <br>
+                    <button id="changeButton">Change Style</button>
+                </div>
+            </section>
 
 
+            <section id="projects">
+                <h2>Projects</h2>
+                <details class="project">
+                    <summary class="project-title">
+                        <h3>Facebook Marketplace Search Ranking</h3>
+                    </summary>
+                    <img
+                        src="./images/187090477-d83b72d0-87d2-4142-a13f-eb7c2c02d33a.gif"
+                        alt="A gif image of how the model works when deployed using FastAPI"
+                        class="project-image"
+                    />
 
-  <main>
+                    <p>
+                        A demonstration of my specialism project in the AiCore using a Gif image where the model returns probabilities when
+                        an image of any project or a text description or both are entered on the FastAPI server. This project fine-tuned a ResNET50 and implemented
+                        a pre-trained BERT model.
+                    </p>
+                </details>
+            </section>
 
-    <section class="banner">
-        <div class="statement">
-            <h3>Hi, my name is Areeb Shafqat where I love building machine learning models and solving pratical problems in data science</h3>
-        </div>
-    </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <div id="skills-container">
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>R</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+
+                    </ul>
+                </div>
+              </section>
+        </main>
 
 
-  </main>  
+        <footer>Made by Areeb with <span class="my_footer">♥</span> from Riyadh</footer>
 
-</body>
- 
+
+    </body>
+
+    <script>
+        var button = document.getElementById('changeButton');
+        var image = document.getElementsByClassName('portrait')[0];
+
+        var imageStyleState = 0;
+
+        const change_button_style = () => {
+
+            switch (imageStyleState) {
+                case 0:
+                    image.style.borderRadius = '0%';
+                    break;
+                case 1:
+                    image.style.borderRadius = '15%';
+                    break;
+                case 2:
+                    image.style.borderRadius = '30%';
+                    break;
+                case 3:
+                    image.style.borderRadius = '50%';
+                    break;
+                default:
+                    image.style.borderRadius = '100%';
+
+            }
+
+
+        imageStyleState = (imageStyleState + 1) % 4;
+
+        }
+
+
+        button.addEventListener('click', change_button_style);
+        
+    </script>
+
 </html>
