@@ -140,6 +140,16 @@ html {
     }
   }
   
+  .callout {
+    border: 1px solid var(--font-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-3);
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+}
 
   .new-style {
     border: 2px solid red;
