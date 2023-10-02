@@ -5,6 +5,7 @@
         <title>My Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="./CSS/style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
 
     <body>
@@ -12,15 +13,22 @@
             <h2 id="logo">Areeb Shafqat</h2>
             <ul class="navigation">
                 <li class="nav_item"><a href="#about-me">About Me</a></li>
-                <li class="nav_item"><a href="#about-me">Projects</a></li>
-                <li class="nav_item"><a href="#about-me">Skills</a></li>
-                <li class="nav_item"><a href="#about-me">Contact</a></li>
+                <li class="nav_item"><a href="#projects">Projects</a></li>
+                <li class="nav_item"><a href="#skills">Skills</a></li>
+                <li class="nav_item"><a href="#contact-container">Contact</a></li>
                 <li class="nav_item"><a href="/resume/resume.pdf" download>CV</a></li>
             </ul>
         </nav>
 
         <main>
             <section id="about-me">
+                <div class="center">
+                    <img src="./images/profile_photo.jpg"
+                    alt="A photo of me during my brother's wedding!"
+                    class="portrait"/>
+                </div>
+                <br>
+                <!-- <button id="changeButton">Change Style</button> -->
                 <div class="about_me_container">
                     <div class="about_me_text_container">
                         <h2>About Me</h2>
@@ -50,11 +58,6 @@
                             <strong>Fun Fact!</strong> I presented my dissertation research in the OR63 conference!
                         </p>
                     </div>
-                    <img src="./images/WhatsApp Image 2023-01-23 at 09.14.29.jpg"
-                    alt="A photo of me during my graduation ceremony"
-                    class="portrait"/>
-                    <br>
-                    <button id="changeButton">Change Style</button>
                 </div>
             </section>
 
@@ -94,6 +97,36 @@
                     </ul>
                 </div>
               </section>
+
+              <section class="contact">
+                <h2>Contact</h2>
+                <div id="contact-container">
+                    <div class="contact-item">
+                        <a href="https://www.linkedin.com/in/areebshafqat297/">
+                        <i class="fab fa-linkedin"></i>
+                        </a>
+                        Areeb Shafqat
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.acs.com.sa/">
+                        <i class="fas fa-envelope"></i>
+                        </a>
+                        areeb.s@acs.com.sa
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.acs.com.sa/">
+                        <i class="fas fa-map-marker-alt" style="margin-right:11px; font-size: 25px;"></i>
+                        </a>
+                        8540 King Abdul Aziz road - al wazarat
+                    </div>
+                    <div class="contact-item">
+                        <img style="margin-right: 10px; width: 20px; height: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/1200px-Flag_of_Saudi_Arabia.svg.png" alt="Saudi Arabia flag">
+                        Riyadh, Saudi Arabia
+                    </div>
+                </div>
+            </section>
+
+        
         </main>
 
 
